@@ -34,6 +34,12 @@ const listMenu = [
 ]
 
 function Menu() {
+  const [menuActive, setMenuActive] = React.useState(-1)
+  const handleClickMenu = (index) => {
+    setMenuActive(index)
+    console.log("index", index)
+  }
+
   return (
     <Box className="box-main-menu">
       <CssBaseline />
@@ -63,11 +69,11 @@ function Menu() {
             {listMenu.map((menu, index) => (
               <Link to={menu.path} className="link-menu">
                 <ListItem key={index} disablePadding>
-                    <ListItemButton>
-                        <ListItemIcon className="ico-menu-item">
+                    <ListItemButton onClick={() => handleClickMenu(index)}>
+                        <ListItemIcon className={`ico-menu-item${index === menuActive ? `-active` : ``}`}>
                             {menu.icon}
                         </ListItemIcon>
-                        <ListItemText primary={menu.name} />
+                        <ListItemText primary={menu.name} className={`${index === menuActive ? `text-menu-active` : ``}`}/>
                     </ListItemButton>
                 </ListItem>
               </Link>

@@ -36,6 +36,15 @@
     color: var(--color-text-menu) !important;
 }
 
+.ico-menu-item-active {
+    color: var(--color-purple) !important;
+}
+
+.text-menu-active {
+    color: var(--color-purple) !important;
+    font-weight: bold !important;
+}
+
 .drawer-menu .MuiDrawer-paper {
     width: 100%;
     position: absolute;
