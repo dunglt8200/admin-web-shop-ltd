@@ -9,7 +9,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import ChaletIcon from '@mui/icons-material/Chalet';
+import OtherHousesIcon from '@mui/icons-material/OtherHouses';
 import AppsIcon from '@mui/icons-material/Apps';
 import AirplaneTicketIcon from '@mui/icons-material/AirplaneTicket';
 import CodeIcon from '@mui/icons-material/Code';
@@ -23,7 +23,7 @@ import { Link } from 'react-router-dom';
 const listMenu = [
     {
         name: "Trang chủ",
-        icon: <ChaletIcon />,
+        icon: <OtherHousesIcon />,
         path: ROUTERS.HOME
     },
     {
@@ -55,7 +55,7 @@ function Menu() {
            </Box>  
            <CodeIcon />       
         </Box>
-        <Divider />
+        
          {/* search */}
         <Paper className="paper-search-menu">         
             <IconButton type="button" aria-label="search" sx={{ color: "#AEB9E1" }}>
@@ -63,6 +63,9 @@ function Menu() {
             </IconButton>
             <InputBase sx={{ color: "#AEB9E1" }} placeholder="Tìm kiếm ..."/>
         </Paper>
+
+        <Divider className="divider-menu"/>
+
         {/* menu */}
         <Box sx={{ overflow: 'auto' }}>
           <List>

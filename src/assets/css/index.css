@@ -1,7 +1,8 @@
 @import url("../css//main.css");
 
 :root {
-    --background-menu: #081028;
+    --background-menu: #0b1531;
     --color-text-menu: #AEB9E1;
     --color-purple: #8951FF;
+    --color-background-children:#1a1a2c;
 }
