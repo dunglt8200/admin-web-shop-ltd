@@ -1,12 +1,22 @@
 .drawer-menu .MuiDrawer-paper {
     background-color: var(--background-menu);
     color: var(--color-text-menu);
+    padding-left: 5vh;
+    padding-right: 5vh;
 }
 
 .box-logo-menu {
     display: flex;
     flex-direction: row;
     height: 10vh;
+    align-items: center;
+    gap: 2vh;
+}
+
+.box-menu-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -18,8 +28,8 @@
 
 .ico-logo-menu {
     color: var(--color-purple);
-    width: 20% !important;
-    height: 50% !important;
+    width: 30% !important;
+    height: 60% !important;
 }
 
 .ico-menu-item {
@@ -27,19 +37,47 @@
 }
 
 .drawer-menu .MuiDrawer-paper {
-    width: 300px !important;
+    width: 100%;
+    position: absolute;
 }
 
 .box-main-menu {
     display: flex;
-}
-
-.drawer-menu {
-    width: 240px !important;
-    flex-shrink: 0 !important;
+    width: 18%;
+    position: relative;
 }
 
 .drawer-menu .MuiDrawer-paper {
     box-sizing: border-box !important;
 }
 
+.css-1gtchvp-MuiPaper-root {
+    background-color: #0B1739 !important;
+    height: 4vh;
+}
+
+.paper-search-menu {
+    display: flex;
+    flex-direction: row;
+    color: var(--color-text-menu);
+    border: 0.5px solid var(--color-text-menu);
+    opacity: 0.5;
+}
+
+.link-menu {
+    text-decoration: none;
+    color: var(--color-text-menu) !important;
+}
+
+.box-main-master-layout {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+}
+
+.box-main-children {
+    display: flex;
+    flex-direction: column;
+    width: 82%;
+}

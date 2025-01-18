@@ -5,10 +5,14 @@ import Header from "../common/Header";
 
 function MasterLayout({children}) {
     return (
-        <Box>
+        <Box className="box-main-master-layout">
             <Menu />
-            <Header />
-            {children}
+            <Box className="box-main-children">
+                <Header />
+                <Box>
+                    {children}
+                </Box>          
+            </Box>
         </Box>
     )
 }
