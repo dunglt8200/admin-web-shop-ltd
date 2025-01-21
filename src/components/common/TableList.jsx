@@ -3,7 +3,7 @@ import { Box, Table, TableBody, TableCell, TableContainer, TableHead,TableRow, P
 
 function TableList({ isCheck, title, headers, data, renderRowActions }) {
     const [page, setPage] = useState(0);
-    const [rowsPerPage, setRowsPerPage] = useState(3);
+    const [rowsPerPage, setRowsPerPage] = useState(5);
     // Hàm xử lý khi thay đổi trang
     const handleChangePage = (event, newPage) => {
         setPage(newPage);
@@ -62,7 +62,7 @@ function TableList({ isCheck, title, headers, data, renderRowActions }) {
 
             {/* Table Pagination */}
             <TablePagination
-                rowsPerPageOptions={[3, 10, 25, 100]}
+                rowsPerPageOptions={[5, 10, 25, 100]}
                 component="div"
                 count={data.length}
                 rowsPerPage={rowsPerPage}

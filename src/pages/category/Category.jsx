@@ -26,6 +26,38 @@ const data = [
         id: 'TYPE 4',
         name: 'Reebok',
     },
+    {
+        id: 'TYPE 1',
+        name: 'Nike',
+      },
+      {
+          id: 'TYPE 2',
+          name: 'Adidas',
+      },
+      {
+          id: 'TYPE 3',
+          name: 'Puma',
+      },
+      {
+          id: 'TYPE 4',
+          name: 'Reebok',
+      },
+      {
+        id: 'TYPE 1',
+        name: 'Nike',
+      },
+      {
+          id: 'TYPE 2',
+          name: 'Adidas',
+      },
+      {
+          id: 'TYPE 3',
+          name: 'Puma',
+      },
+      {
+          id: 'TYPE 4',
+          name: 'Reebok',
+      },
 ]
 
 function Category() {
