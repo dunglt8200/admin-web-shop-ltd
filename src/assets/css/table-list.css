@@ -1,0 +1,25 @@
+.table-container {
+    background-color: #1A1A2E !important;
+}
+
+.table-cell-header {
+    color: white !important;
+    font-weight: bold !important;
+    font-size: larger !important;
+}
+
+.color-row-table {
+    background-color: var(--color-grey);
+}
+
+.table-cell {
+    color: white !important;
+}
+
+.css-1dc80h3-MuiTableCell-root {
+    border-bottom: none !important;
+}
+
+.css-1orzuox-MuiTableCell-root {
+    border-bottom: none !important;
+}

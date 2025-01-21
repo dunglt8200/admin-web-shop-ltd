@@ -9,9 +9,7 @@ function MasterLayout({children}) {
             <Menu />
             <Box className="box-main-children">
                 <Header />
-                <Box>
-                    {children}
-                </Box>          
+                {children}          
             </Box>
         </Box>
     )

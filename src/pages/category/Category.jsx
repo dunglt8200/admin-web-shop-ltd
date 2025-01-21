@@ -5,10 +5,40 @@ import BoxItemCount from "../../components/common/BoxItemCount";
 import BookmarkAddedIcon from '@mui/icons-material/BookmarkAdded';
 import LocalFireDepartmentIcon from '@mui/icons-material/LocalFireDepartment';
 import PreviewIcon from '@mui/icons-material/Preview';
+import TableList from "../../components/common/TableList";
+import RowActions from "../../components/common/RowActions";
+
+const headers = ['Mã', 'Tên danh mục'];
+const data = [
+    {
+      id: 'TYPE 1',
+      name: 'Nike',
+    },
+    {
+        id: 'TYPE 2',
+        name: 'Adidas',
+    },
+    {
+        id: 'TYPE 3',
+        name: 'Puma',
+    },
+    {
+        id: 'TYPE 4',
+        name: 'Reebok',
+    },
+]
 
 function Category() {
+    const handleEdit = (row) => {
+        console.log('Edit:', row);
+      };
+    
+      const handleDelete = (row) => {
+        console.log('Delete:', row);
+      };
+
     return (
-        <Box>
+        <Box className="box-main-category">
             <Box className="box-category-title">
                 <Box className="box-category-title-search">
                     <Typography className="text-title-category">Danh Mục</Typography>
@@ -24,7 +54,17 @@ function Category() {
             </Box>
 
             <Box className= "box-table-category">
-
+                <TableList
+                        isCheck={false}
+                        headers={headers}
+                        data={data}
+                        renderRowActions={(row) => (
+                            <RowActions
+                            onEdit={() => handleEdit(row)}
+                            onDelete={() => handleDelete(row)}
+                            />
+                        )}
+                />
             </Box>
         </Box>              
     )
