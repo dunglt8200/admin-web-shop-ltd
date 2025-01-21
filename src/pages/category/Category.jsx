@@ -48,14 +48,17 @@ function Category() {
             </Box>
 
             <Box className="box-item-count-category">
+            <BoxItemCount icon={<PreviewIcon className="icon-item-count" sx={{color: "orange"}}/>} title={"Danh mục xem nhiều"} value={3} bgColor={"#FFA500"}/>
                 <BoxItemCount icon={<BookmarkAddedIcon className="icon-item-count" sx={{color: "yellow"}}/>} title={"Tổng danh mục"} value={10} bgColor={"#FFFF00"}/>
                 <BoxItemCount icon={<LocalFireDepartmentIcon className="icon-item-count" sx={{color: "green"}}/>} title={"Danh mục bán chạy"} value={2} bgColor={"#008000"}/>
+                <BoxItemCount icon={<PreviewIcon className="icon-item-count" sx={{color: "orange"}}/>} title={"Danh mục xem nhiều"} value={3} bgColor={"#FFA500"}/>
                 <BoxItemCount icon={<PreviewIcon className="icon-item-count" sx={{color: "orange"}}/>} title={"Danh mục xem nhiều"} value={3} bgColor={"#FFA500"}/>
             </Box>
 
             <Box className= "box-table-category">
                 <TableList
                         isCheck={false}
+                        title={"Tất cả danh mục"}
                         headers={headers}
                         data={data}
                         renderRowActions={(row) => (

@@ -1,10 +1,25 @@
-import React from "react";
-import { Box, Table, TableBody, TableCell, TableContainer, TableHead,TableRow, Paper, Checkbox, Avatar, Typography } from '@mui/material';
+import React, { useState } from "react";
+import { Box, Table, TableBody, TableCell, TableContainer, TableHead,TableRow, Paper, Checkbox, Typography, TablePagination } from '@mui/material';
 
-function TableList({ isCheck, headers, data, renderRowActions }) {
+function TableList({ isCheck, title, headers, data, renderRowActions }) {
+    const [page, setPage] = useState(0);
+    const [rowsPerPage, setRowsPerPage] = useState(3);
+    // Hàm xử lý khi thay đổi trang
+    const handleChangePage = (event, newPage) => {
+        setPage(newPage);
+    };
+    // Hàm xử lý khi thay đổi số dòng trên mỗi trang
+    const handleChangeRowsPerPage = (event) => {
+        setRowsPerPage(parseInt(event.target.value, 10));
+        setPage(0); // Quay lại trang đầu tiên khi thay đổi số dòng mỗi trang
+    };
+
     return (
         <TableContainer component={Paper} className="table-container">
-            <Table>
+            <Box className="box-title-table">
+                <Typography>{title}</Typography>
+            </Box>
+            <Table className="table-main">
                 {/* Table Header */}
                 <TableHead>
                     <TableRow className="color-row-table">
@@ -24,7 +39,7 @@ function TableList({ isCheck, headers, data, renderRowActions }) {
 
                 {/* Table Body */}
                 <TableBody>
-                    {data.map((row, index) => (
+                    {data.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row, index) => (
                     <TableRow key={index} className={`${index % 2 !== 0 ? "color-row-table" : ""}`}>
                         <TableCell> {isCheck && <Checkbox />}</TableCell>
                         {/* Render từng cell từ dữ liệu */}
@@ -44,6 +59,18 @@ function TableList({ isCheck, headers, data, renderRowActions }) {
                     ))}
                 </TableBody>
             </Table>
+
+            {/* Table Pagination */}
+            <TablePagination
+                rowsPerPageOptions={[3, 10, 25, 100]}
+                component="div"
+                count={data.length}
+                rowsPerPage={rowsPerPage}
+                page={page}
+                onPageChange={handleChangePage}
+                onRowsPerPageChange={handleChangeRowsPerPage}
+            />
+            
       </TableContainer>
     )
 }

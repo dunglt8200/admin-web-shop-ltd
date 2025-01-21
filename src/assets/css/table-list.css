@@ -1,5 +1,8 @@
 .table-container {
     background-color: #1A1A2E !important;
+    border: 0.1px solid var(--color-text-menu);
+    border-radius: 2vh !important;
+    border: 0.1px solid rgba(255, 255, 255, 0.2);
 }
 
 .table-cell-header {
@@ -22,4 +25,26 @@
 
 .css-1orzuox-MuiTableCell-root {
     border-bottom: none !important;
+}
+
+.box-title-table {
+    width: 100%;
+    height: 8vh;
+    border: 0.1px solid rgba(255, 255, 255, 0.2);
+    align-items: center;
+    display: flex;
+    padding-left: 5vh;
+}
+
+.box-title-table p {
+    font-size: larger !important;
+    color: white;
+}
+
+.css-1gak8h1-MuiToolbar-root-MuiTablePagination-toolbar {
+    color: var(--color-text-menu) !important;
+}
+
+.css-mmygx2-MuiSelect-select-MuiInputBase-input.MuiSelect-select {
+    background-color: white;
 }
