@@ -1,8 +1,10 @@
 @import url("../css//main.css");
+@import url("../css/category.css");
 
 :root {
     --background-menu: #0b1531;
     --color-text-menu: #AEB9E1;
     --color-purple: #8951FF;
     --color-background-children:#1a1a2c;
+    --color-grey: #0B1739;
 }

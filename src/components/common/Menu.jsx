@@ -13,12 +13,9 @@ import OtherHousesIcon from '@mui/icons-material/OtherHouses';
 import AppsIcon from '@mui/icons-material/Apps';
 import AirplaneTicketIcon from '@mui/icons-material/AirplaneTicket';
 import CodeIcon from '@mui/icons-material/Code';
-import Paper from '@mui/material/Paper';
-import InputBase from '@mui/material/InputBase';
-import IconButton from '@mui/material/IconButton';
-import SearchIcon from '@mui/icons-material/Search';
 import { ROUTERS } from '../../routers/RouterPath';
 import { Link } from 'react-router-dom';
+import Search from './Search';
 
 const listMenu = [
     {
@@ -37,7 +34,6 @@ function Menu() {
   const [menuActive, setMenuActive] = React.useState(-1)
   const handleClickMenu = (index) => {
     setMenuActive(index)
-    console.log("index", index)
   }
 
   return (
@@ -57,12 +53,7 @@ function Menu() {
         </Box>
         
          {/* search */}
-        <Paper className="paper-search-menu">         
-            <IconButton type="button" aria-label="search" sx={{ color: "#AEB9E1" }}>
-              <SearchIcon />
-            </IconButton>
-            <InputBase sx={{ color: "#AEB9E1" }} placeholder="Tìm kiếm ..."/>
-        </Paper>
+        <Search />
 
         <Divider className="divider-menu"/>
 
@@ -70,7 +61,7 @@ function Menu() {
         <Box sx={{ overflow: 'auto' }}>
           <List>
             {listMenu.map((menu, index) => (
-              <Link to={menu.path} className="link-menu">
+              <Link to={menu.path} className="link-menu" key={index}>
                 <ListItem key={index} disablePadding>
                     <ListItemButton onClick={() => handleClickMenu(index)}>
                         <ListItemIcon className={`ico-menu-item${index === menuActive ? `-active` : ``}`}>

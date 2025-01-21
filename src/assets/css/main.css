@@ -107,3 +107,33 @@
     border-color: var(--color-text-menu) !important;
     padding-top: 5vh;
 }
+
+.box-item-count {
+    background-color: var(--color-grey);
+    width: 18%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 8vh;
+    border: 0.5px solid var(--color-text-menu);
+    opacity: 0.5;
+    border-radius: 10px;
+    padding-left: 2vh;
+    padding-right: 2vh;
+    gap: 10px;
+}
+
+.box-icon-item-count {
+    display: flex;
+    width: 5vh;
+    height: 5vh;
+    justify-items: center;
+    align-items: center;
+    border-radius: 50%;
+    padding-left: 1vh;
+}
+
+.icon-item-count {
+    width: 3vh !important;
+    height: 3vh !important;
+}
