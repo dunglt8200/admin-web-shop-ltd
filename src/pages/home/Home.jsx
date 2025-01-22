@@ -1,9 +1,10 @@
-import { Box } from "@mui/system";
+import { Box, width } from "@mui/system";
 import React from "react";
 import BoxItemCountHome from "../../components/common/BoxItemCountHome";
 import BadgeIcon from '@mui/icons-material/Badge';
 import PieChartDashboard from "../../components/common/PieChartDashboard";
 import { Typography } from "@mui/material";
+import BarChartDashboard from "../../components/common/BarChartDashboard";
 
 const categorys = [
     {
@@ -20,6 +21,7 @@ const categorys = [
     }
   ];
 
+const dataX = ['Thứ 2', 'Thứ 3', 'Thứ 4', 'Thứ 5','Thứ 6', 'Thứ 7', 'CN']
 function Home() {
     return (
         <Box className="box-main-home">
@@ -30,12 +32,15 @@ function Home() {
                 <BoxItemCountHome icon={<BadgeIcon sx={{ backgroundColor: "#AEB9E1" }}/>} title={"Tổng người truy cập"} value={"22"} isIncrease={false} percentValue={"4,2%"}/>
             </Box>
             <Box className="box-chart-home">
-                <Box className="box-chart-product">
-
+                <Box className="box-chart-product">                
+                  <Box sx={{ width: '100%', height: '90%'}}>
+                    <BarChartDashboard dataX={dataX}/>  
+                  </Box>
+                  <Typography sx={{ color: "#fff" }}>Thống kê sản phẩm bán chạy trong tuần</Typography>              
                 </Box>
                 <Box className="box-chart-group">
                     <Box className="box-chart-category">
-                      <PieChartDashboard data={categorys}/>                   
+                      <PieChartDashboard data={categorys}/>                  
                       <Typography sx={{ color: "#fff" }}>Thống kê sản phẩm theo loại</Typography>
                     </Box>
                     <Box className="box-chart-bill">
