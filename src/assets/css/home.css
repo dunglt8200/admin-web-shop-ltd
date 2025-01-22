@@ -60,4 +60,40 @@
 .box-chart-home {
    width: 100%;
    height: 77%;
+   display: flex;
+   flex-direction: row;
+   gap: 2vh;
+}
+
+.box-chart-product {
+    width: 60%;
+    height: 70%;
+    background-color: var(--color-grey);
+    border-radius: 3px;
+}
+
+.box-chart-group {
+    width: 40%;
+    height: 70%;   
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+.box-chart-category {
+    width: 100%;
+    height: 60%;
+    background-color: var(--color-grey);
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
+.box-chart-bill {
+    width: 100%;
+    height: 40%;
+    background-color: var(--color-grey);
+    border-radius: 3px;
 }
