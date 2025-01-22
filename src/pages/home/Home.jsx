@@ -5,6 +5,7 @@ import BadgeIcon from '@mui/icons-material/Badge';
 import PieChartDashboard from "../../components/common/PieChartDashboard";
 import { Typography } from "@mui/material";
 import BarChartDashboard from "../../components/common/BarChartDashboard";
+import PieChartDashboard_1part2 from "../../components/common/PieChartDashboard_1part2";
 
 const categorys = [
     {
@@ -22,6 +23,14 @@ const categorys = [
   ];
 
 const dataX = ['Thứ 2', 'Thứ 3', 'Thứ 4', 'Thứ 5','Thứ 6', 'Thứ 7', 'CN']
+
+const dataChat1_2 = [
+  { label: 'Group A', value: 400 },
+  { label: 'Group B', value: 300 },
+  { label: 'Group C', value: 300 },
+];
+
+
 function Home() {
     return (
         <Box className="box-main-home">
@@ -44,7 +53,7 @@ function Home() {
                       <Typography sx={{ color: "#fff" }}>Thống kê sản phẩm theo loại</Typography>
                     </Box>
                     <Box className="box-chart-bill">
-
+                      <PieChartDashboard_1part2 data={dataChat1_2}/>
                     </Box>
                 </Box>               
             </Box>       

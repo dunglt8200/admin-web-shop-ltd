@@ -16,8 +16,9 @@ export default function PieChartDashboard({data}) {
       slotProps={{
         legend: {
           labelStyle:{
-            fill: 'white'
-          }
+            fill: 'white',            
+          },
+          direction: 'row',  
         },
       }}
     />
