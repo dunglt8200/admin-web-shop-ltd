@@ -1,6 +1,7 @@
 @import url("../css//main.css");
 @import url("../css/category.css");
 @import url("../css/table-list.css");
+@import url("../css/home.css");
 
 :root {
     --background-menu: #0b1531;
@@ -8,4 +9,7 @@
     --color-purple: #8951FF;
     --color-background-children:#1a1a2c;
     --color-grey: #0B1739;
+    --color-green: #0A3942;
+    --color-green-text: #1a9953;
+    --color-red: #3C2442;
 }
