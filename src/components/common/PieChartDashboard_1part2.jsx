@@ -18,7 +18,7 @@ export default function PieChartDashboard_1part2({ data }) {
         height={200}
         slotProps={{
             legend: {
-              direction:"row",
+              // direction:"row",
               labelStyle:{
                 fill: 'white',            
               }

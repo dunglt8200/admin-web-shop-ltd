@@ -45,7 +45,7 @@ function Home() {
                   <Box sx={{ width: '100%', height: '90%'}}>
                     <BarChartDashboard dataX={dataX}/>  
                   </Box>
-                  <Typography sx={{ color: "#fff" }}>Thống kê sản phẩm bán chạy trong tuần</Typography>              
+                  <Typography sx={{ color: "#fff" }}>Thống kê sản phẩm bán chạy</Typography>              
                 </Box>
                 <Box className="box-chart-group">
                     <Box className="box-chart-category">
@@ -54,6 +54,7 @@ function Home() {
                     </Box>
                     <Box className="box-chart-bill">
                       <PieChartDashboard_1part2 data={dataChat1_2}/>
+                      <Typography sx={{ color: "#fff" }}>Thống kê lượt truy cập</Typography>
                     </Box>
                 </Box>               
             </Box>       
